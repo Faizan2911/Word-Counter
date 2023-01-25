@@ -59,14 +59,14 @@ function App() {
         {/* <Navbar />  */}
 
 
-        <Navbar title="TextUtilites*" aboutText="About" mode={mode} toogleMode={toogleMode} />
+        <Navbar title="Word Counter" aboutText="About" mode={mode} toogleMode={toogleMode} />
         <Alert alert={alert} />
 
         <div className="container my-3">
           <Routes>
-        
+
             <Route exact path="about" element={<About />} />
-            <Route exact path="/" element={<TextForm heading="Enter the analysis" mode={mode} />} />
+            <Route exact path="/" element={<TextForm heading="Type OR Paste Your Text" mode={mode} />} />
 
             {/* <About /> */}
           </Routes>

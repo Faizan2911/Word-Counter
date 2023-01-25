@@ -8,7 +8,7 @@ export default function Navbar(props) {
       className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}
     >
       <a className="navbar-brand" href="/">
-        {props.title}
+        <h3>{props.title}</h3>
       </a>
 
       <button
@@ -27,21 +27,21 @@ export default function Navbar(props) {
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
             <Link className="nav-link" to="/">
-              Home <span className="sr-only">(current)</span>
+              <h5> Home</h5>
+              <span className="sr-only">(current)</span>
             </Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/about">
-              {props.aboutText}
+              <h5>{props.aboutText}</h5>
             </Link>
           </li>
         </ul>
-        
+
 
         <div
-          className={`form-check form-switch text-${
-            props.mode === "light" ? "dark" : "light"
-          }`}
+          className={`form-check form-switch text-${props.mode === "light" ? "dark" : "light"
+            }`}
         >
           <input
             className="form-check-input"
@@ -63,7 +63,4 @@ Navbar.prototype = {
   aboutText: PropTypes.string.isRequired,
 };
 
-// Navbar.defaultProps = {
-//     title : "set here title",
-//     aboutText :  "there about"
-// }
+
